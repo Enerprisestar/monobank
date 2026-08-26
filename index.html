@@ -1,14 +1,13 @@
-```html
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Кандидат на Customer Care Specialist — monobank</title>
+    <title>Кандидат на Фахівця служби турботи — monobank</title>
 
     <meta name="description"
-          content="Персональная презентация кандидата на позицию Фахівець служби турботи monobank.">
+          content="Персональна презентація кандидата на позицію Фахівця служби турботи monobank.">
 
     <style>
         * {
@@ -71,14 +70,50 @@
             justify-content: space-between;
         }
 
+        /* Власний логотип кандидата */
+
         .logo {
-            font-size: 28px;
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font-size: 22px;
             font-weight: 800;
-            letter-spacing: -1.5px;
+            letter-spacing: -1px;
         }
 
-        .logo span {
+        .logo-mark {
+            width: 42px;
+            height: 42px;
+            background: var(--yellow);
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 6px 18px rgba(0,0,0,.08);
+        }
+
+        .logo-mark svg {
+            width: 25px;
+            height: 25px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-main {
+            color: var(--black);
+        }
+
+        .logo-sub {
             color: var(--gray);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .4px;
+            margin-top: 4px;
         }
 
         .nav-links {
@@ -114,7 +149,12 @@
             display: flex;
             align-items: center;
             background:
-                radial-gradient(circle at 85% 25%, #ffe600 0, #ffe600 180px, transparent 181px),
+                radial-gradient(
+                    circle at 85% 25%,
+                    #ffe600 0,
+                    #ffe600 180px,
+                    transparent 181px
+                ),
                 linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%);
         }
 
@@ -212,7 +252,7 @@
             margin-bottom: 60px;
         }
 
-        .mono-symbol {
+        .candidate-symbol {
             width: 54px;
             height: 54px;
             background: var(--yellow);
@@ -221,8 +261,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 27px;
-            font-weight: 900;
+        }
+
+        .candidate-symbol svg {
+            width: 32px;
+            height: 32px;
         }
 
         .status {
@@ -245,7 +288,7 @@
         }
 
         /* =========================
-           INTRO
+           SECTIONS
         ========================= */
 
         section {
@@ -591,14 +634,43 @@
     <div class="container nav">
 
         <a href="#" class="logo">
-            mono<span>/candidate</span>
+
+            <div class="logo-mark">
+
+                <!-- Власний знак: діалог + літера C -->
+                <svg viewBox="0 0 40 40" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <path
+                        d="M9 11.5C9 9.57 10.57 8 12.5 8H27.5C29.43 8 31 9.57 31 11.5V23.5C31 25.43 29.43 27 27.5 27H18L12 32V27H12.5C10.57 27 9 25.43 9 23.5V11.5Z"
+                        stroke="#111111"
+                        stroke-width="3"
+                        stroke-linejoin="round"
+                    />
+
+                    <path
+                        d="M25 14.5C23.7 13.55 22.1 13 20.35 13C16.28 13 13 16.13 13 20C13 23.87 16.28 27 20.35 27C22.1 27 23.7 26.45 25 25.5"
+                        stroke="#111111"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="logo-text">
+                <span class="logo-main">candidate</span>
+                <span class="logo-sub">CUSTOMER CARE</span>
+            </div>
+
         </a>
 
         <nav class="nav-links">
-            <a href="#about">Обо мне</a>
-            <a href="#equipment">Техника</a>
-            <a href="#reliability">Надёжность</a>
-            <a href="#contact" class="nav-button">Связаться</a>
+            <a href="#about">Про мене</a>
+            <a href="#equipment">Техніка</a>
+            <a href="#reliability">Надійність</a>
+            <a href="#contact" class="nav-button">Зв'язатися</a>
         </nav>
 
     </div>
@@ -617,18 +689,19 @@
 
                 <div class="badge fade">
                     <span class="badge-dot"></span>
-                    Кандидат на Customer Care Specialist
+                    Кандидат на Фахівця служби турботи
                 </div>
 
                 <h1 class="fade delay-1">
-                    Я готов<br>
-                    <span>заботиться о клиентах.</span>
+                    Я готовий<br>
+                    <span>піклуватися про клієнтів.</span>
                 </h1>
 
                 <p class="hero-description fade delay-2">
-                    Я рассматриваю работу в monobank не как временную подработку,
-                    а как возможность надолго стать частью команды, развиваться
-                    в клиентском сервисе и каждый день помогать людям решать их вопросы.
+                    Я розглядаю роботу в monobank не як тимчасову підробітку,
+                    а як можливість надовго стати частиною команди,
+                    розвиватися у клієнтському сервісі та щодня допомагати
+                    людям вирішувати їхні питання.
                 </p>
 
                 <div class="hero-buttons fade delay-2">
@@ -638,11 +711,11 @@
                         target="_blank"
                         class="button button-black"
                     >
-                        Посмотреть вакансию →
+                        Переглянути вакансію →
                     </a>
 
                     <a href="#about" class="button button-yellow">
-                        Почему я подхожу
+                        Чому я підходжу
                     </a>
 
                 </div>
@@ -654,23 +727,43 @@
 
                 <div class="hero-card-top">
 
-                    <div class="mono-symbol">
-                        m
+                    <div class="candidate-symbol">
+
+                        <svg viewBox="0 0 40 40"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+
+                            <path
+                                d="M8 11.5C8 9.57 9.57 8 11.5 8H28.5C30.43 8 32 9.57 32 11.5V23.5C32 25.43 30.43 27 28.5 27H18L12 32V27H11.5C9.57 27 8 25.43 8 23.5V11.5Z"
+                                stroke="#111"
+                                stroke-width="3"
+                                stroke-linejoin="round"
+                            />
+
+                            <path
+                                d="M24 14.5C22.8 13.6 21.3 13 19.7 13C15.8 13 12.8 16.1 12.8 20C12.8 23.9 15.8 27 19.7 27C21.3 27 22.8 26.4 24 25.5"
+                                stroke="#111"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                            />
+
+                        </svg>
+
                     </div>
 
                     <div class="status">
-                        READY TO WORK
+                        ГОТОВИЙ ДО РОБОТИ
                     </div>
 
                 </div>
 
                 <h2>
-                    Customer Care
-                    Specialist
+                    Фахівець<br>
+                    служби турботи
                 </h2>
 
                 <p>
-                    Удалённая работа · Клиенты · Чат · Сервис · Развитие
+                    Віддалена робота · Клієнти · Чат · Сервіс · Розвиток
                 </p>
 
             </div>
@@ -687,18 +780,18 @@
         <div class="container">
 
             <div class="section-label">
-                Почему я
+                Чому я
             </div>
 
             <h2 class="section-title">
-                Я подготовился к этой работе заранее.
+                Я заздалегідь підготувався до цієї роботи.
             </h2>
 
             <p class="section-text">
-                Для меня удалённая работа — это не просто возможность работать
-                из дома. Я понимаю, что сотрудник службы заботы должен быть
-                доступен, собран, спокоен и технически готов работать даже
-                тогда, когда возникают бытовые сложности.
+                Для мене віддалена робота — це не просто можливість працювати
+                з дому. Я розумію, що співробітник служби турботи має бути
+                доступним, зібраним, спокійним і технічно готовим до роботи
+                навіть тоді, коли виникають побутові труднощі.
             </p>
 
 
@@ -709,13 +802,14 @@
                     <div class="card-number">01</div>
 
                     <h3>
-                        Хочу работать надолго
+                        Хочу працювати надовго
                     </h3>
 
                     <p>
-                        Я ищу стабильную работу, в которой смогу развиваться,
-                        накапливать опыт и постепенно расти внутри команды,
-                        а не рассматривать вакансию как краткосрочный вариант.
+                        Я шукаю стабільну роботу, у якій зможу розвиватися,
+                        накопичувати досвід і поступово зростати всередині
+                        команди, а не розглядати вакансію як короткостроковий
+                        варіант.
                     </p>
 
                 </div>
@@ -726,12 +820,12 @@
                     <div class="card-number">02</div>
 
                     <h3>
-                        Готов учиться
+                        Готовий навчатися
                     </h3>
 
                     <p>
-                        Готов пройти полный период онлайн-обучения и внимательно
-                        изучить стандарты общения, продукты и процессы компании.
+                        Готовий пройти повний період онлайн-навчання та уважно
+                        вивчити стандарти спілкування, продукти й процеси компанії.
                     </p>
 
                 </div>
@@ -742,13 +836,13 @@
                     <div class="card-number">03</div>
 
                     <h3>
-                        Спокойно общаюсь
+                        Спокійно спілкуюся
                     </h3>
 
                     <p>
-                        В работе с клиентами для меня важно сначала понять
-                        проблему человека, а уже потом искать решение.
-                        Спокойное и уважительное общение считаю обязательным.
+                        У роботі з клієнтами для мене важливо спочатку зрозуміти
+                        проблему людини, а вже потім шукати рішення.
+                        Спокійне та ввічливе спілкування вважаю обов'язковим.
                     </p>
 
                 </div>
@@ -767,17 +861,16 @@
         <div class="container">
 
             <div class="section-label">
-                Рабочее место
+                Робоче місце
             </div>
 
             <h2 class="section-title">
-                Я подготовил технику именно под удалённую работу.
+                Я підготував техніку саме для віддаленої роботи.
             </h2>
 
             <p class="section-text">
-                Я понимаю технические требования вакансии и заранее позаботился
-                о рабочем месте. Ниже можно указать реальные характеристики
-                вашей техники.
+                Я розумію технічні вимоги вакансії та заздалегідь подбав
+                про робоче місце. Усе необхідне для стабільної роботи вже є.
             </p>
 
 
@@ -790,48 +883,48 @@
                     </div>
 
                     <h3>
-                        Рабочий ноутбук
+                        Робочий ноутбук
                     </h3>
 
                     <p>
-                        Ноутбук подготовлен для ежедневной удалённой работы,
-                        общения с клиентами и прохождения онлайн-обучения.
+                        Ноутбук підготовлений для щоденної віддаленої роботи,
+                        спілкування з клієнтами та проходження онлайн-навчання.
                     </p>
 
                     <ul class="spec-list">
 
                         <li>
-                            <span class="spec-name">Процессор</span>
+                            <span class="spec-name">Процесор</span>
                             <span class="spec-value">
-                                i5-8250u
+                                i5-8250U
                             </span>
                         </li>
 
                         <li>
-                            <span class="spec-name">ОЗ</span>
+                            <span class="spec-name">Оперативна пам'ять</span>
                             <span class="spec-value">
                                 8 ГБ
                             </span>
                         </li>
 
                         <li>
-                            <span class="spec-name">Накопитель</span>
+                            <span class="spec-name">Накопичувач</span>
                             <span class="spec-value">
                                 SSD 238 ГБ
                             </span>
                         </li>
 
                         <li>
-                            <span class="spec-name">ОС</span>
+                            <span class="spec-name">Операційна система</span>
                             <span class="spec-value">
                                 Windows 11
                             </span>
                         </li>
 
                         <li>
-                            <span class="spec-name">Type-C зарядка</span>
+                            <span class="spec-name">Заряджання Type-C</span>
                             <span class="spec-value">
-                                ✓ Есть
+                                ✓ Є
                             </span>
                         </li>
 
@@ -847,32 +940,32 @@
                     </div>
 
                     <h3>
-                        Гарнитура
+                        Гарнітура
                     </h3>
 
                     <p>
-                        Есть отдельная гарнитура с микрофоном и USB-подключением
-                        для комфортного общения и работы.
+                        Є окрема гарнітура з мікрофоном та USB-підключенням
+                        для комфортного спілкування та роботи з клієнтами.
                     </p>
 
                     <ul class="spec-list">
 
                         <li>
-                            <span class="spec-name">Микрофон</span>
+                            <span class="spec-name">Мікрофон</span>
                             <span class="spec-value">
-                                ✓ Есть
+                                ✓ Є
                             </span>
                         </li>
 
                         <li>
                             <span class="spec-name">USB</span>
                             <span class="spec-value">
-                                ✓ Есть
+                                ✓ Є
                             </span>
                         </li>
 
                         <li>
-                            <span class="spec-name">Назначение</span>
+                            <span class="spec-name">Призначення</span>
                             <span class="spec-value">
                                 Customer Care
                             </span>
@@ -896,17 +989,17 @@
         <div class="container">
 
             <div class="section-label">
-                Надёжность
+                Надійність
             </div>
 
             <h2 class="section-title">
-                Я предусмотрел даже отключение электричества.
+                Я передбачив навіть відключення електроенергії.
             </h2>
 
             <p class="section-text">
-                Для удалённой работы важна не только техника, но и стабильность.
-                Поэтому я заранее подготовил резервные варианты, чтобы бытовые
-                обстоятельства как можно меньше влияли на рабочий процесс.
+                Для віддаленої роботи важлива не лише техніка, а й стабільність.
+                Тому я заздалегідь підготував резервні варіанти, щоб побутові
+                обставини якомога менше впливали на робочий процес.
             </p>
 
 
@@ -919,12 +1012,12 @@
                     </div>
 
                     <h3>
-                        Повербанк
+                        Павербанк
                     </h3>
 
                     <p>
-                        Есть повербанк для поддержания связи и работы мобильных
-                        устройств во время отключений электричества.
+                        Є павербанк для підтримання зв'язку та роботи мобільних
+                        пристроїв під час відключень електроенергії.
                     </p>
 
                 </div>
@@ -937,12 +1030,12 @@
                     </div>
 
                     <h3>
-                        Стабильный интернет
+                        Стабільний інтернет
                     </h3>
 
                     <p>
-                        Основное интернет-соединение есть, а Wi-Fi-оборудование
-                        подключено к источнику бесперебойного питания.
+                        Основне інтернет-з'єднання є, а Wi-Fi-обладнання
+                        підключене до джерела безперебійного живлення.
                     </p>
 
                 </div>
@@ -955,12 +1048,12 @@
                     </div>
 
                     <h3>
-                        Резервное питание
+                        Резервне живлення
                     </h3>
 
                     <p>
-                        При отключении электроэнергии я могу продолжать поддерживать
-                        интернет и оставаться на связи.
+                        У разі відключення електроенергії я можу продовжувати
+                        підтримувати інтернет і залишатися на зв'язку.
                     </p>
 
                 </div>
@@ -979,21 +1072,21 @@
         <div class="container">
 
             <div class="section-label">
-                Моя мотивация
+                Моя мотивація
             </div>
 
             <h2 class="section-title">
-                Я хочу не просто получить работу.
-                Я хочу стать хорошим специалистом.
+                Я хочу не просто отримати роботу.
+                Я хочу стати хорошим спеціалістом.
             </h2>
 
             <div class="commitment-box">
 
                 <p>
-                    Если я получу возможность присоединиться к monobank,
-                    я готов серьёзно относиться к обучению, соблюдать рабочие
-                    стандарты, внимательно относиться к клиентам и постепенно
-                    становиться сильнее как специалист.
+                    Якщо я отримаю можливість приєднатися до monobank,
+                    я готовий серйозно ставитися до навчання, дотримуватися
+                    робочих стандартів, уважно ставитися до клієнтів
+                    і поступово ставати сильнішим як спеціаліст.
                 </p>
 
             </div>
@@ -1005,32 +1098,61 @@
 
     <!-- FINAL -->
 
-    <section id="contact" class="final">
+   <!-- FINAL -->
 
-        <div class="container">
+<section id="contact" class="final">
 
-            <h2>
-                Готов<br>
-                присоединиться.
-            </h2>
+    <div class="container">
 
-            <p>
-                Я подготовил рабочее место, технику и резервные варианты
-                подключения. Осталось получить возможность показать себя
-                уже внутри команды.
-            </p>
+        <div class="section-label">
+            Контактна інформація
+        </div>
+
+        <h2>
+            Рибак Дмитро
+        </h2>
+
+        <p>
+            24 роки
+        </p>
+
+        <div style="
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 30px 0 35px;
+        ">
+
+            <a
+                href="tel:+380500188062"
+                class="button button-black"
+            >
+                📞 050 018 80 62
+            </a>
 
             <a
                 href="https://monobank.ua/careers/customer-care-specialist"
                 target="_blank"
-                class="button button-black"
+                class="button button-yellow"
             >
-                Перейти к вакансии monobank →
+                Перейти до вакансії →
             </a>
 
         </div>
 
-    </section>
+        <p style="
+            font-size: 15px;
+            color: #888;
+            margin: 0 auto;
+        ">
+            Готовий до навчання, роботи з клієнтами
+            та довгострокового розвитку в команді.
+        </p>
+
+    </div>
+
+</section>
 
 </main>
 
@@ -1040,11 +1162,11 @@
     <div class="container footer-inner">
 
         <div>
-            Персональная презентация кандидата
+            Персональна презентація кандидата
         </div>
 
         <div>
-            Customer Care Specialist · monobank
+            Фахівець служби турботи · monobank
         </div>
 
     </div>
